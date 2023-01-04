@@ -1,6 +1,6 @@
 [user]
 	name = Aijaz Baig
-	email = abaig1@marvell.com
+	email = aijazbaig1@gmail.com
 [alias]
     lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(    reset)%C(bold yellow)%d%C(reset)' --all
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d    %C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
@@ -36,13 +36,6 @@
     trustExitCode = true
 #    cmd = "/c/Program\\ Files\\/WinMerge/WinMergeU.exe" -u -e -x -wl -wr -dl "Base" -dr "Mine" $LOCAL $REMOTE    
     cmd = "/c/Program\\ Files\\/WinMerge/WinMergeU.exe" -u -e -x -wl -dl $LOCAL -dr $REMOTE $LOCAL $REMOTE    
-[difftool "gvimdiff"]
- #   path = "C:/Program Files (x86)/Vim/vim82/gvim.exe"
-#[difftool "winmerge"]
-    #cmd = "C:/Program Files/WinMerge/winmergeu.exe" -e -u -x -wl -wr -dl "base" -dr "mine" \"$LOCAL\" \"$REMOTE\"    
-#    path = "C:/Program Files/WinMerge/winmergeu.exe"
-[gui]
-   #recentrepo = C:/Users/abaig1/Documents/Work/FEATURES/NVMe_TCP/QEDN_SYNC_WINDOWS/qedn
 [gitreview]
 	remote = origin
 	username = Aijaz Baig
@@ -56,5 +49,3 @@
 #   eol=lf
 [credential "helperselector"]
 	selected = store
-[credential "https://vgitcentral.marvell.com"]
-	provider = generic
