@@ -14,35 +14,18 @@
     checkout = checkout && submodule init && submodule update
     #switch = git switch && git submodule init && git submodule update
     switch = switch && submodule init && submodule update
-#    apply = apply --whitespace=fix
-#[diff]
-#	 tool = gvimdiff
-
+    apply = apply --whitespace=fix
+[diff]
+	 tool = gvimdiff
+[difftool "gvimdiff"]
+    prompt = false
 [mergetool]
     prompt = false
     keepBackup = false
     keepTemporaries = false
 [merge]
-    tool = winmerge
-[mergetool "winmerge"]
-    name = WinMerge
-    trustExitCode = true
-#    cmd = "/c/Program\\ Files\\/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED    
-    cmd = "/c/Program\\ Files\\/WinMerge/WinMergeU.exe" -u -e -x -wl -dl \"LOCAL\" -dm \"Merged\" -dr \"MergeFROM\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
-[diff]
-    tool = winmerge
-[difftool "winmerge"]
-    name = WinMerge
-    trustExitCode = true
-#    cmd = "/c/Program\\ Files\\/WinMerge/WinMergeU.exe" -u -e -x -wl -wr -dl "Base" -dr "Mine" $LOCAL $REMOTE    
-    cmd = "/c/Program\\ Files\\/WinMerge/WinMergeU.exe" -u -e -x -wl -dl $LOCAL -dr $REMOTE $LOCAL $REMOTE    
-[difftool "gvimdiff"]
- #   path = "C:/Program Files (x86)/Vim/vim82/gvim.exe"
-#[difftool "winmerge"]
-    #cmd = "C:/Program Files/WinMerge/winmergeu.exe" -e -u -x -wl -wr -dl "base" -dr "mine" \"$LOCAL\" \"$REMOTE\"    
-#    path = "C:/Program Files/WinMerge/winmergeu.exe"
-[gui]
-   #recentrepo = C:/Users/abaig1/Documents/Work/FEATURES/NVMe_TCP/QEDN_SYNC_WINDOWS/qedn
+    tool = gvimdiff
+    conflictstyle = diff3
 [gitreview]
 	remote = origin
 	username = Aijaz Baig
@@ -51,10 +34,7 @@
 [credential]
 	helper = manager
 [core]
-   excludesfile = C:/Users/abaig1/.gitignore
    autocrlf=true
 #   eol=lf
 [credential "helperselector"]
 	selected = store
-[credential "https://vgitcentral.marvell.com"]
-	provider = generic
