@@ -167,6 +167,7 @@ if has("gui_running")
 endif
 if &diff
     set nofoldenable
+    colorscheme desert
     :noremap <F5> [c
     :noremap <F6> ]c
     syntax off
