@@ -15,6 +15,7 @@
     #switch = git switch && git submodule init && git submodule update
     switch = switch && submodule init && submodule update
     apply = apply --whitespace=fix
+    branchremote = branch -r
 [diff]
 	 tool = gvimdiff
 [difftool "gvimdiff"]
