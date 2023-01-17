@@ -20,13 +20,13 @@
 	 tool = gvimdiff
 [difftool "gvimdiff"]
     prompt = false
+[merge]
+    tool = meld
+    conflictstyle = diff3
 [mergetool]
     prompt = false
     keepBackup = false
     keepTemporaries = false
-[merge]
-    tool = gvimdiff
-    conflictstyle = diff3
 [gitreview]
 	remote = origin
 	username = Aijaz Baig
