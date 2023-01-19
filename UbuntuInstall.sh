@@ -20,5 +20,9 @@ cp gitconfig ~/.gitconfig
 
 # install github cli
 cd /tmp
-wget https://github.com/cli/cli/releases/download/v2.21.2/gh_2.21.2_linux_amd64.deb
+if compgen -G "gh*.deb" > /dev/null; then
+   echo "gh installer exists"
+else
+   wget https://github.com/cli/cli/releases/download/v2.21.2/gh_2.21.2_linux_amd64.deb
+fi
 sudo dpkg -i gh_2.21.2_linux_amd64.deb
