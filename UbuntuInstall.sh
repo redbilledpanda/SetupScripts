@@ -2,7 +2,7 @@ set -x
 # disable unattended upgrades
 sudo apt remove unattended-upgrades
 
-sudo apt-get update
+#sudo apt-get update
 sudo apt-get install -y openssh-server python3-pip
 
 # start SSH service
