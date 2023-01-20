@@ -1,4 +1,7 @@
 set -x
+# update vimrc
+cp .vimrc ~/.vimrc
+
 # disable unattended upgrades
 sudo apt remove unattended-upgrades
 
@@ -6,8 +9,8 @@ sudo apt-get update
 sudo apt-get install -y openssh-server python3-pip
 
 # start SSH service
-sudo systemctl enable ssh --now
-sudo systemctl start ssh
+sudo update-rc.d ssh defaults
+sudo update-rc.d ssh enable
 
 # installing ansible
 python3 -m pip install --user ansible
