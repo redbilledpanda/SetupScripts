@@ -10,7 +10,8 @@ sudo apt remove -y unattended-upgrades
 
 #sudo apt-get update
 sudo apt --fix-missing update
-sudo apt-get install -y openssh-server python3-pip
+sudo apt-get install -y vim-gtk3 openssh-server python3-pip
+sudo update-alternatives --set editor /usr/bin/vim.basic
 
 # start SSH service
 sudo systemctl enable ssh --now
