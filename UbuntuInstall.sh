@@ -1,8 +1,15 @@
 set -x
+# never prompt me for passwd when I `sudo`
+echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/dont-prompt-$USER-for-sudo-password"
+
+# copy vimrc
+cp vimrc ~/.vimrc
+
 # disable unattended upgrades
-sudo apt remove unattended-upgrades
+sudo apt remove -y unattended-upgrades
 
 #sudo apt-get update
+sudo apt --fix-missing update
 sudo apt-get install -y openssh-server python3-pip
 
 # start SSH service
