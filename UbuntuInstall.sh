@@ -17,6 +17,10 @@ sudo update-alternatives --set editor /usr/bin/vim.basic
 sudo systemctl enable ssh --now
 sudo systemctl start ssh
 
+# change default run level to CLI
+sudo systemctl enable multi-user.target
+sudo systemctl set-default multi-user.target
+
 # installing ansible
 python3 -m pip install --user ansible
 
