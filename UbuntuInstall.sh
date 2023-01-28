@@ -19,7 +19,7 @@ sudo systemctl start ssh
 
 # change default run level to CLI
 sudo systemctl enable multi-user.target
-sudo systemctl set-default multi-user.target
+#sudo systemctl set-default multi-user.target
 
 # installing ansible
 python3 -m pip install --user ansible

@@ -16,6 +16,8 @@
     switch = switch && submodule init && submodule update
     apply = apply --whitespace=fix
     branchremote = branch -r
+[pull]
+    rebase = true
 [diff]
 	 tool = gvimdiff
 [difftool "gvimdiff"]
