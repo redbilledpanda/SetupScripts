@@ -37,7 +37,7 @@
 [credential]
 	helper = manager
 [core]
-   autocrlf=true
+   autocrlf=input
 #   eol=lf
 [credential "helperselector"]
 	selected = store
