@@ -19,25 +19,30 @@
 [pull]
     rebase = true
 [diff]
-	 tool = gvimdiff
-[difftool "gvimdiff"]
-    prompt = false
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
 [merge]
-    tool = meld
-    conflictstyle = diff3
-[mergetool]
-    prompt = false
-    keepBackup = false
-    keepTemporaries = false
+  tool = meld
+  conflictstyle = diff3
+[mergetool "meld"]
+  trustExitCode = true
+  prompt = false
+  keepBackup = false
+  keepTemporaries = false
+  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"    
 [gitreview]
 	remote = origin
 	username = Aijaz Baig
 [http]
-	postBuffer = 1048576000
+   #postBuffer = 1048576000
 [credential]
 	helper = manager
 [core]
-   autocrlf=input
+#   autocrlf=input
 #   eol=lf
 [credential "helperselector"]
 	selected = store
