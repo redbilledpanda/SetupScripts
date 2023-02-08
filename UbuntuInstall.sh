@@ -23,6 +23,8 @@ sudo systemctl enable multi-user.target
 
 # installing ansible
 python3 -m pip install --user ansible
+echo "export PATH:~/.local/bin:$PATH" >> bashrc
+cp bashrc ~/.bashrc
 
 # installing meld
 sudo apt install -y meld
@@ -38,3 +40,4 @@ else
    wget https://github.com/cli/cli/releases/download/v2.21.2/gh_2.21.2_linux_amd64.deb
 fi
 sudo dpkg -i gh_2.21.2_linux_amd64.deb
+sudo update-locale LANG=en_US.utf8
