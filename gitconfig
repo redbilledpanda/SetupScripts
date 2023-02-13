@@ -24,7 +24,7 @@
   prompt = false
 [difftool "meld"]
   trustExitCode = true
-  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
 [merge]
   tool = meld
   conflictstyle = diff3
@@ -33,7 +33,7 @@
   prompt = false
   keepBackup = false
   keepTemporaries = false
-  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"    
+  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
 [gitreview]
 	remote = origin
 	username = Aijaz Baig
