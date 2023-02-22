@@ -161,7 +161,7 @@ nmap <C-\>n :set nonumber!<CR>
 
 " Press F11 to toggle highlighting on/off, and show current value.
 :noremap <F11> :set hlsearch! hlsearch?<CR>
-set gfn=Monospace\ 12
+set gfn=Consolas:h12
 if has("gui_running")
     colorscheme desert
 endif
