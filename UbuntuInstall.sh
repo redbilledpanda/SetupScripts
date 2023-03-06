@@ -21,6 +21,10 @@ sudo systemctl start ssh
 sudo systemctl enable multi-user.target
 #sudo systemctl set-default multi-user.target
 
+# adding handy aliases to switch between CLI and GUI
+echo "alias disableGui='sudo systemctl isolate multi-user.target'" >> ~/.bashrc
+echo "alias enableGui='sudo systemctl isolate graphical.target'" >> ~/.bashrc
+
 # installing ansible
 python3 -m pip install --user ansible
 echo "export PATH:~/.local/bin:$PATH" >> bashrc
@@ -38,6 +42,6 @@ if compgen -G "gh*.deb" > /dev/null; then
    echo "gh installer exists"
 else
    wget https://github.com/cli/cli/releases/download/v2.21.2/gh_2.21.2_linux_amd64.deb
+   sudo dpkg -i gh_2.21.2_linux_amd64.deb
+   sudo update-locale LANG=en_US.utf8
 fi
-sudo dpkg -i gh_2.21.2_linux_amd64.deb
-sudo update-locale LANG=en_US.utf8
