@@ -27,7 +27,7 @@ echo "alias enableGui='sudo systemctl isolate graphical.target'" >> ~/.bashrc
 
 # installing ansible
 python3 -m pip install --user ansible
-echo "export PATH:~/.local/bin:$PATH" >> bashrc
+echo "export PATH=~/.local/bin:$PATH" >> bashrc
 cp bashrc ~/.bashrc
 
 # installing meld
