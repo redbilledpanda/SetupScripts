@@ -16,6 +16,7 @@
     switch = switch && submodule init && submodule update
     apply = apply --whitespace=fix
     branchremote = branch -r
+    clonetag = !sh -c 'git clone --depth 1 --branch $1 $2' --
 [pull]
     rebase = true
 [diff]
@@ -24,7 +25,7 @@
   prompt = false
 [difftool "meld"]
   trustExitCode = true
-  cmd = meld "$REMOTE" "$LOCAL"
+  cmd = meld "$LOCAL" "$REMOTE" 
 [merge]
   tool = meld
   conflictstyle = diff3
