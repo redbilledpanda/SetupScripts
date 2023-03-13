@@ -21,9 +21,6 @@ sudo systemctl start ssh
 sudo systemctl enable multi-user.target
 #sudo systemctl set-default multi-user.target
 
-# adding handy aliases to switch between CLI and GUI
-echo "alias disableGui='sudo systemctl isolate multi-user.target'" >> ~/.bashrc
-echo "alias enableGui='sudo systemctl isolate graphical.target'" >> ~/.bashrc
 
 # installing ansible
 python3 -m pip install --user ansible
