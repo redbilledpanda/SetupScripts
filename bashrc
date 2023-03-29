@@ -126,3 +126,4 @@ export LS_COLORS
 
 alias mount_VMShared='/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs/ -o subtype=vmhgfs-fuse,allow_other'
 alias lsnclr='ls -lrt --color=none'
+export PATH=~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
