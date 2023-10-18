@@ -17,6 +17,11 @@
     apply = apply --whitespace=fix
     branchremote = branch -r
     clonetag = !sh -c 'git clone --depth 1 --branch $1 $2' --
+    createReview = "!f() { git push origin HEAD:refs/for/\"$1\"; }; f"
+    updateReview = "!f() { git push origin HEAD:refs/changes/\"$1\"; }; f"
+    branchdelete = push origin --delete
+    branchcreate = "!f() { git checkout -b \"$1\" && git push -u origin \"$1\"; }; f"
+    touch-staged = !git diff --name-only --cached | xargs -r touch
 [pull]
     rebase = true
 [diff]
@@ -26,6 +31,7 @@
 [difftool "meld"]
   trustExitCode = true
   cmd = meld "$LOCAL" "$REMOTE" 
+  #cmd = ~/Downloads/meld-wPath/bin "$LOCAL" "$REMOTE" 
 [merge]
   tool = meld
   conflictstyle = diff3
@@ -35,6 +41,7 @@
   keepBackup = false
   keepTemporaries = false
   cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+  #cmd = ~/Downloads/meld-wPath/bin "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 [gitreview]
 	remote = origin
 	username = Aijaz Baig

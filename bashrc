@@ -126,4 +126,20 @@ export LS_COLORS
 
 alias mount_VMShared='/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs/ -o subtype=vmhgfs-fuse,allow_other'
 alias lsnclr='ls -lrt --color=none'
-export PATH=~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+export PATH=~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin::~/cmake-3.27.3-linux-x86_64/bin
+
+findsrc() {
+  if [ -z "$1" ]; then
+    echo "Usage: findc DIRECTORY"
+    return 1
+  fi
+
+  # Check if the provided directory exists
+  if [ ! -d "$1" ]; then
+    echo "Error: Directory '$1' does not exist."
+    return 1
+  fi
+
+  # Use the find command to search for C source files and print the target of symlinks
+  find "$1" -type f -iname "*.[chsSxX]" -exec readlink -f {} \;
+}
