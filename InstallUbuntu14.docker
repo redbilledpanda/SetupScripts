@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+set -x
+
+if [[ -z $(docker images | grep -w ubuntu-trusty ) ]]; then
+    mkdir -p docker
+    echo "FROM ubuntu:14.04" > docker/Dockerfile
+    echo "RUN apt-get update && apt-get install -y wget unzip bc git python rsync build-essential libncurses5-dev locales" >> docker/Dockerfile
+    echo "RUN locale-gen en_US.UTF-8" >> docker/Dockerfile
+    echo "ENV LANG en_US.UTF-8" >> docker/Dockerfile
+    echo "ENV LANGUAGE en_US:en" >> docker/Dockerfile
+    echo "ENV LC_ALL en_US.UTF-8" >> docker/Dockerfile
+    docker build --tag "ubuntu-trusty" docker/
+fi

@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+set -x
+
+cd ~
+docker run --rm -it -v $(pwd):/home -w /home -e HOME=/home ubuntu-trusty bash
+

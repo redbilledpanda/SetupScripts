@@ -143,3 +143,5 @@ findsrc() {
   # Use the find command to search for C source files and print the target of symlinks
   find "$1" -type f -iname "*.[chsSxX]" -exec readlink -f {} \;
 }
+export PATH="~/.local/bin:/home/aijazbaig1/.local/bin:/home/aijazbaig1/gems/bin:~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PATH="~/.local/bin:/home/aijazbaig1/.local/bin:~/.local/bin:/home/aijazbaig1/.local/bin:/home/aijazbaig1/gems/bin:~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
