@@ -23,9 +23,9 @@ sudo systemctl enable multi-user.target
 
 
 # installing ansible
-python3 -m pip install --user ansible
-echo "export PATH=\"~/.local/bin:$PATH\"" >> bashrc
-cp bashrc ~/.bashrc
+# python3 -m pip install --user ansible
+# echo "export PATH=\"~/.local/bin:$PATH\"" >> bashrc
+# cp bashrc ~/.bashrc
 
 # installing meld
 sudo apt install -y meld
@@ -37,10 +37,10 @@ cp gitconfig ~/.gitconfig
 sudo update-locale LANG=en_US.utf8
 
 # Kernel Compilation requirements
-sudo apt install -y fakeroot build-essential tar ncurses-dev tar xz-utils libssl-dev bc stress python3-distutils libelf-dev linux-headers-$(uname -r) bison flex libncurses5-dev util-linux net-tools linux-tools-generic exuberant-ctags cscope sysfsutils perf-tools-unstable gnuplot rt-tests indent tree smem libnuma-dev numactl hwloc bpfcc-tools sparse flawfinder cppcheck tuna trace-cmd virt-what
+# sudo apt install -y fakeroot build-essential tar ncurses-dev tar xz-utils libssl-dev bc stress python3-distutils libelf-dev linux-headers-$(uname -r) bison flex libncurses5-dev util-linux net-tools linux-tools-generic exuberant-ctags cscope sysfsutils perf-tools-unstable gnuplot rt-tests indent tree smem libnuma-dev numactl hwloc bpfcc-tools sparse flawfinder cppcheck tuna trace-cmd virt-what
 
 # Jekyll related
-echo "alias testsiteLocally='bundle exec jekyll serve'" >> ~/.bashrc
+# echo "alias testsiteLocally='bundle exec jekyll serve'" >> ~/.bashrc
 
 # Uninstalling prev docker
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
